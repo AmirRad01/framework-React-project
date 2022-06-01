@@ -1,38 +1,503 @@
-.App {
-  text-align: center;
-}
+/* body settings and imports */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* Header */
+
+.main-nav {
+  width: 100%;
+  height: 80px;
+  background-color: #333333;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  align-content: center;
+}
+
+.brand-icon {
+  background-image: url('./assets/image/reception-alarm-svgrepo-com.svg');
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: unset;
+  background-position: center;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0;
+  z-index: 1;
+}
+
+.brand-icon:hover {
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+.nav-menu ul {
+
+  list-style: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navigation {
+  text-decoration: none;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-menu ul li {
+  transition: all .3s ease-out;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-menu ul li:hover {
+  background-color: #f0a184;
+  border-radius: 5px;
+  color: white;
+}
+
+.nav-menu-child {
+  overflow: hidden;
+  width: 100%;
+}
+
+.login,
+.Signup {
+  color: black;
+  background-color: white;
+  transition: all .3s ease-out;
+  padding: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.login:hover,
+.Signup:hover {
+  background-color: #1684af;
+  color: white;
+}
+
+
+/* footer */
+
+
+.main-footer {
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  color: white;
+}
+
+.list-1 ul,
+.list-2 ul {
+  list-style: none;
+}
+
+.list-1 ul li,
+.list-2 ul li {
+  cursor: pointer;
+}
+
+.icons-container i {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: all .3s ease-out;
+}
+
+.icons-container i:hover {
+  color: white;
+  background-color: #1684af;
+}
+
+.donate-box {
+  border: 2px dashed white;
+  cursor: pointer;
+  transition: all .3s ease-out;
+  width: 50%;
+}
+
+.donate-box:hover {
+  color: orange;
+  border: 2px dashed orange;
+}
+
+/* Home-page */
+
+/* main-header */
+
+.main-container {
+  width: 100%;
+  height: 450px;
+  background-image: url('./assets/image/wallpaper1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: unset;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.search-form {
+  position: absolute;
+  background-color: #dbdbdbd3;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.search-btn {
+  background-color: orange;
+  color: white;
+  transition: all .3s ease-out;
+  border-radius: 10px;
+  border: none;
+}
+
+.search-btn:hover {
+  background-color: wheat;
+  color: black;
+}
+
+#search-inp {
+  border: none;
+  border-radius: 10px;
+}
+
+/* main-section-box */
+
+.main-title {
+  display: block;
+  width: 100%;
+  background-color: #0f680f;
+  color: white;
+}
+
+.add-recipes-box {
+  background-color: #f1eee5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+}
+
+.main-article {
+  cursor: pointer;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all .3s ease-out;
+}
+
+.main-article:hover {
+  color: white;
+  background-color: rebeccapurple;
+  border-radius: 10px;
+}
+
+
+.article-title {
+  width: 100%;
+}
+
+
+/* about-Page */
+
+.main-article-image-2 {
+  height: 350px;
+  background-image: url('./assets/image/spoonacular-mission.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: unset;
+  background-position: center;
+  z-index: 1;
+}
+
+
+/* Login-page */
+
+.login-body {
+  background: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+
+.login-h {
+  font-weight: bold;
+  margin: 0;
+}
+
+.login-h2 {
+  text-align: center;
+}
+
+.login-p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+.login-span {
+  font-size: 12px;
+}
+
+.login-a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.login-btn {
+  border: none;
+  border-radius: 20px;
+  background-color: #c9381e;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all .3s ease-out;
+}
+
+.login-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.login-form {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+.login-input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.p-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.overlay {
+  background: #FF416C;
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #FFFFFF;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+
+}
+
+.overlay-panel {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.089), rgba(0, 0, 0, 0.137)), url('./assets/image/pic-24.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: unset;
+  background-position: center;
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+}
+
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.social-container {
+  margin: 20px 0;
+}
+
+.social-container a {
+  border: 1px solid #DDDDDD;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+  transition: all .3s ease-out;
+}
+
+.social:hover {
+  background-color: #1684af;
+  color: white;
+}
+
+.signup-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* signup-page */
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+.signUp-body {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.356)), url('./assets/image/food.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: unset;
+  background-position: center;
+  z-index: 1;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.signUp-h2 {
+  padding-top: 1.5rem;
+}
+
+.signUp-a {
+  color: #333;
+}
+
+.signUp-a:hover {
+  color: #da5767;
+  text-decoration: none;
+}
+
+.card {
+  border: 0.40rem solid #f8f9fa;
+  top: 10%;
+  position: unset;
+}
+
+.form-control {
+  background-color: #f8f9fa;
+  padding: 20px;
+  padding: 25px 15px;
+  margin-bottom: 1.3rem;
+}
+
+.form-control:focus {
+
+  color: #000000;
+  background-color: #ffffff;
+  border: 3px solid #da5767;
+  outline: 0;
+  box-shadow: none;
+
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  background: #da5767;
+  border: 2px solid #da5767;
+}
+
+.btn-primary:hover {
+
+
+  background-color: #df8c96;
+  border-color: #df8c96;
+  transition: .3s;
+
+}
+
+
+/* advance-search */
+
+
+.advance-search-container {
+  width: 100%;
+  font-weight: normal;
+  font-family: cursive;
+  color: orange;
 }
